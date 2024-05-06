@@ -1,0 +1,11 @@
+02-05-2024
+
+Question 1. What is dependency injection? Explain with a practical example.
+
+Question 2. Explain Dynamic method dispatching? How to achieve this in java?
+
+Question 3. What is IOC Container and Spring Container? Explain its roles.
+
+Question 4. Write a difference between Java bean & Spring bean with an example(code).
+
+Question 5. When do we get multiple bean exception and how many ways there are to manage that exception?
