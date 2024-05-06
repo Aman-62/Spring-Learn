@@ -15,7 +15,6 @@ public class MainApp04GamingSpringBeans {
 
 	public static void main(String[] args) {
 		var context = new AnnotationConfigApplicationContext(MainApp04GamingSpringBeans.class);
-
 		context.getBean(GameRunner.class).run();
 	}
 }
