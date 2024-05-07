@@ -1,4 +1,4 @@
-package com.achievers.learnspring;
+package com.achievers.learnspring.test;
 
 import java.io.Serializable;
 
