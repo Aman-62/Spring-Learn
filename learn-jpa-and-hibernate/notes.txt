@@ -1,0 +1,14 @@
+JDBC to Spring JDBC to JPA tp Spring Data JPA
+
+> JDBC
+    > Write a lot SQL queries (delete from todo where id=?)
+    > And write a lot of Java code
+
+> Spring JDBC
+    > Write a lot SQL queries (delete from todo where id=?)
+    > BUT lesser Java code
+
+
+EXAMPLE: 
+insert into course (id, name, trainer)
+values (1, 'Learn Docker', 'Vishal');

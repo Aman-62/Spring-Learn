@@ -5,6 +5,8 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
 
@@ -12,7 +14,8 @@ interface DataService {
     public int[] retrieveData();
 }
 
-@Component
+//@Component
+@Repository
 @Primary
 class MongoDbDataService implements DataService {
     public int[] retrieveData() {
@@ -20,14 +23,16 @@ class MongoDbDataService implements DataService {
     };
 }
 
-@Component
+//@Component
+@Repository
 class MySqlDbDataService implements DataService {
     public int[] retrieveData() {
         return new int[] {1, 2, 3, 4, 5};
     };
 }
 
-@Component
+//@Component
+@Service
 class BusinessCalculationService {
     private DataService dataService;
 

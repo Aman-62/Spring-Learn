@@ -9,3 +9,19 @@ Question 3. What is IOC Container and Spring Container? Explain its roles.
 Question 4. Write a difference between Java bean & Spring bean with an example(code).
 
 Question 5. When do we get multiple bean exception and how many ways there are to manage that exception?
+
+
+
+09-05-2024
+
+Describe the following terms:
+01. @Configuration
+02. @ComponentScan
+03. @Bean
+04. @Component
+05. @Primary
+06. @Qualifier
+07. @Lazy
+08. @Scope
+09. @PostConstruct
+10. @PreDestroy
