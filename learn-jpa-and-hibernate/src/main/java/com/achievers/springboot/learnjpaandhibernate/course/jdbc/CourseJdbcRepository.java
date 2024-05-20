@@ -1,9 +1,11 @@
-package com.achievers.springboot.learnjpaandhibernate.course;
+package com.achievers.springboot.learnjpaandhibernate.course.jdbc;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
+
+import com.achievers.springboot.learnjpaandhibernate.course.Course;
 
 @Repository
 public class CourseJdbcRepository {

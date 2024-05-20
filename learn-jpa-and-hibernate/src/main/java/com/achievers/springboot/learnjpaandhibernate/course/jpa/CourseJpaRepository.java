@@ -1,6 +1,8 @@
-package com.achievers.springboot.learnjpaandhibernate.course;
+package com.achievers.springboot.learnjpaandhibernate.course.jpa;
 
 import org.springframework.stereotype.Repository;
+
+import com.achievers.springboot.learnjpaandhibernate.course.Course;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
