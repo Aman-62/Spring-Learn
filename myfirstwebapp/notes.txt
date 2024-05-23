@@ -1,3 +1,11 @@
 package com.achievers.spingboot.myfirstwebapp.login.LoginController.class;
 
 localhost:8080/login => login.jsp => "Welcome to login page"
+
+Todo
+
+id
+username
+description
+targetDate
+done
