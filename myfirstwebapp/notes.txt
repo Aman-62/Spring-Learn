@@ -9,3 +9,6 @@ username
 description
 targetDate
 done
+
+
+REQUEST vs MODEL vs Session

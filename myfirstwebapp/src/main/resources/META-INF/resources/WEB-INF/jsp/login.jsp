@@ -1,14 +1,26 @@
 <html>
     <head>
+        <link rel="stylesheet" href="webjars/bootstrap/5.3.3/css/bootstrap.min.css">
         <title>Login page</title>
     </head>
     <body>
-        <h2>Welcome to Login page!</h2>
-        <pre>${errorMessage}</pre>
-        <form method="POST">
-            Name: <input type="text" name="name" /> Password:
-            <input type="password" name="password" />
-            <button type="submit">Submit</button>
-        </form>
+        <div class="container">
+
+            <h2>Login</h2>
+            
+            <hr>
+
+            <form method="POST">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" name="name" id="name" class="form-control"/>
+
+                <label for="pass" class="form-label">Password</label>
+                <input type="password" name="password" id="pass" class="form-control" />
+
+                <div class="text-danger">${errorMessage}</div>
+                
+                <button type="submit" class="btn btn-primary mt-3">Submit</button>
+            </form>
+        </div>
     </body>
 </html>
