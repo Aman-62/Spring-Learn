@@ -2,15 +2,19 @@
 
 <html>
     <head>
-        <link rel="stylesheet" href="webjars/bootstrap/5.3.3/css/bootstrap.min.css">
+        <link
+            rel="stylesheet"
+            href="webjars/bootstrap/5.3.3/css/bootstrap.min.css"
+        />
         <title>Todos</title>
     </head>
 
     <body>
+        <%@ include file="common/navigation.jspf" %>
         <div class="container">
-            <h2>Your Todos</h2>
+            <h1>Your Todos</h1>
 
-            <hr>
+            <hr />
 
             <table class="table table-hover">
                 <thead>
@@ -25,19 +29,28 @@
                 </thead>
 
                 <tbody>
-                    <c:forEach items="${todos}" var="todo" >
-
+                    <c:forEach items="${todos}" var="todo">
                         <tr>
                             <td>${todo.id}</td>
                             <td>${todo.description}</td>
                             <td>${todo.targetDate}</td>
                             <td>${todo.done}</td>
-                            <td><a href="delete-todo?id=${todo.id}" class="btn btn-sm btn-danger" >Delete</a></td>
-                            <td><a href="update-todo?id=${todo.id}" class="btn btn-sm btn-primary" >Update</a></td>
+                            <td>
+                                <a
+                                    href="delete-todo?id=${todo.id}"
+                                    class="btn btn-sm btn-danger"
+                                    >Delete</a
+                                >
+                            </td>
+                            <td>
+                                <a
+                                    href="update-todo?id=${todo.id}"
+                                    class="btn btn-sm btn-primary"
+                                    >Update</a
+                                >
+                            </td>
                         </tr>
-
                     </c:forEach>
-                    
                 </tbody>
             </table>
 
