@@ -1,9 +1,6 @@
 <html>
     <head>
-        <link
-            rel="stylesheet"
-            href="webjars/bootstrap/5.3.3/css/bootstrap.min.css"
-        />
+        <link rel="stylesheet" href="webjars/bootstrap/5.3.3/css/bootstrap.min.css"/>
         <title>Welcome page</title>
     </head>
     <body>

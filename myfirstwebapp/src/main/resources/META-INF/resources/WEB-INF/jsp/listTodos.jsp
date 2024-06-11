@@ -2,10 +2,7 @@
 
 <html>
     <head>
-        <link
-            rel="stylesheet"
-            href="webjars/bootstrap/5.3.3/css/bootstrap.min.css"
-        />
+        <link rel="stylesheet" href="webjars/bootstrap/5.3.3/css/bootstrap.min.css"/>
         <title>Todos</title>
     </head>
 
@@ -43,11 +40,7 @@
                                 >
                             </td>
                             <td>
-                                <a
-                                    href="update-todo?id=${todo.id}"
-                                    class="btn btn-sm btn-primary"
-                                    >Update</a
-                                >
+                                <a href="update-todo?id=${todo.id}" class="btn btn-sm btn-primary">Update<a>
                             </td>
                         </tr>
                     </c:forEach>
