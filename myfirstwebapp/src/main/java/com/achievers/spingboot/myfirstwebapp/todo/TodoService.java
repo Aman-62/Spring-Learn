@@ -16,9 +16,9 @@ public class TodoService {
     private static int todosCount = 0;
 
     static {
-        Todo todo1 = new Todo(++todosCount, "Rahul", "Learn Docker", LocalDate.now().plusMonths(6), false);
-        Todo todo2 = new Todo(++todosCount, "Rahul", "Learn AI", LocalDate.now().plusMonths(8), false);
-        Todo todo3 = new Todo(++todosCount, "Rahul", "Learn Python", LocalDate.now().plusMonths(10), false);
+        Todo todo1 = new Todo(++todosCount, "Rahul", "Learn Docker", LocalDate.now().plusMonths(1), false);
+        Todo todo2 = new Todo(++todosCount, "Rahul", "Learn AI", LocalDate.now().plusMonths(2), false);
+        Todo todo3 = new Todo(++todosCount, "Rahul", "Learn Python", LocalDate.now().plusMonths(3), false);
 
         todosList.add(todo1);
         todosList.add(todo2);
@@ -26,7 +26,9 @@ public class TodoService {
     }
 
     public List<Todo> findByUsername(String username) {
-        return todosList;
+        Predicate<Todo> predicate = todo -> todo.getUsername().equals(username);
+
+        return todosList.stream().filter(predicate).toList();
     }
 
     public void addTodo(String username, String description, LocalDate targetDate, boolean done) {

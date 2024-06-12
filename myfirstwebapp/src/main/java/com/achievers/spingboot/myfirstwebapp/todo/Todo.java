@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import jakarta.validation.constraints.Size;
 
 // Database (MySql)
-// Static List of todos => Datebase (h2, MySql)
+// Static List of todos => Database (h2, MySql)
 
 public class Todo {
 
