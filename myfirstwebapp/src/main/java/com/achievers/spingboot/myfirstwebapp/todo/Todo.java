@@ -2,13 +2,22 @@ package com.achievers.spingboot.myfirstwebapp.todo;
 
 import java.time.LocalDate;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.Size;
 
 // Database (MySql)
 // Static List of todos => Database (h2, MySql)
 
+// JPA
+// Bean -> Database table
+
+@Entity
 public class Todo {
 
+    @Id
+    @GeneratedValue
     private int id;
     private String username;
 
