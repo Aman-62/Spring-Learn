@@ -76,3 +76,17 @@
 > /user/1
 > /user/1/post
 > /user/1/post/2
+
+## Response Status for REST API
+
+### Return the correct response status
+
+Important Response statuses
+
+1. 200 - Success
+2. 201 - Created
+3. 204 - No Content
+4. 401 - Unauthorized (when authorization fails)
+5. 400 - Bad Request (such as validation error)
+6. 404 - Resource is not found
+7. 500 - Server error
