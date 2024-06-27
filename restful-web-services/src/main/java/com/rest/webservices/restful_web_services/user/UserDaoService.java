@@ -1,7 +1,6 @@
 package com.rest.webservices.restful_web_services.user;
 
 import java.time.LocalDate;
-// import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
@@ -34,6 +33,6 @@ public class UserDaoService {
 
     public User findOne(int id) {
         Predicate<User> predicate = user -> user.getId().equals(id);
-        return users.stream().filter(predicate).findFirst().get();
+        return users.stream().filter(predicate).findFirst().orElse(null);
     }
 }
