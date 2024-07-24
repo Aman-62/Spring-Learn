@@ -19,6 +19,7 @@ public class HelloWorldController {
     }
 
     // Path parameters
+    // /users/{userId}
     // /users/{id}/todos/{id} => /users/5/todos/10
 
     @GetMapping(path = "/hello-world/path-variable/{name}")
