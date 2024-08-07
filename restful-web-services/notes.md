@@ -90,3 +90,23 @@ Important Response statuses
 5. 400 - Bad Request (such as validation error)
 6. 404 - Resource is not found
 7. 500 - Server error
+
+### Social Media Application - Resource & Methods
+
+#### Users REST API
+
+1. Retrieve all Users
+    > GET /jpa/users
+2. Create a User
+    > POST /jpa/users
+3. Retrieve one User
+    > GET /jpa/users/{id}
+4. Delete a User
+    > DELETE /jpa/user/{id}
+
+#### Posts REST API
+
+1. Retrieve all post for a User
+    > GET /users/{id}/posts
+2. Create a post for a User
+    > POST /users/{id}/posts
