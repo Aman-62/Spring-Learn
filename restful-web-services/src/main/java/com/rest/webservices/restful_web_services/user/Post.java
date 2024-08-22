@@ -12,6 +12,9 @@ import jakarta.validation.constraints.Size;
 @Entity
 public class Post {
 
+    protected Post() {
+    }
+
     @Id
     @GeneratedValue
     private int id;

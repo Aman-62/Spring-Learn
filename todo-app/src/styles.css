@@ -1,0 +1,14 @@
+body {
+  background-color: #111;
+  color: #eee;
+  font-size: 18px;
+}
+
+button {
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+  background-color: #facece;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}

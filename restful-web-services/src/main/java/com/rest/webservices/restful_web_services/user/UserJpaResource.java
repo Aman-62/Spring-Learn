@@ -70,6 +70,16 @@ public class UserJpaResource {
         userRepository.deleteById(id);
     }
 
+    @GetMapping("/jpa/users/{id}/posts")
+    public List<Post> retrievePostsForUser(@PathVariable int id) {
+        Optional<User> user = userRepository.findById(id);
+        if (user.isEmpty()) {
+            throw new UserNotFoundException("id: " + id);
+        }
+
+        return user.get().getPosts();
+    }
+
     @PostMapping("/jpa/users/{id}/posts")
     public ResponseEntity<Post> createPostForUser(@PathVariable int id, @Valid @RequestBody Post post) {
         Optional<User> user = userRepository.findById(id);
@@ -92,4 +102,6 @@ public class UserJpaResource {
         return ResponseEntity.created(location).build();
 
     }
+
+    // @PutMapping("/jpa/users/{userId}/posts/{postId}")
 }
