@@ -12,15 +12,18 @@ function TodoApp() {
   return (
     <div className="TodoApp">
       <BrowserRouter>
+        <HeaderComponent />
         <Routes>
           <Route path="/" element={<LoginComponent />} />
           <Route path="/login" element={<LoginComponent />} />
           <Route path="/welcome/:username" element={<WelcomeComponent />} />
           <Route path="/todos" element={<ListTodosComponent />} />
+          <Route path="/logout" element={<LogoutComponent />} />
 
           <Route path="*" element={<NotFoundComponent />} />
         </Routes>
       </BrowserRouter>
+      <FooterComponent />
     </div>
   );
 }
@@ -55,33 +58,50 @@ function LoginComponent() {
     }
   }
   return (
-    <div className="login">
+    <div className="text-center container">
       <h1>Login page</h1>
-      {showSuccessMessage && <div>Authenticated Successfully</div>}
-      {showErrorMessage && (
-        <div>Authentication Failed, Please check your credentials</div>
+      {showSuccessMessage && (
+        <div className="text-danger">Authenticated Successfully</div>
       )}
-      <form onSubmit={handleSubmit} className="loginForm">
-        <div>
-          <label htmlFor="name">User Name</label>
+      {showErrorMessage && (
+        <div className="text-danger">
+          Authentication Failed, Please check your credentials
+        </div>
+      )}
+      <form
+        onSubmit={handleSubmit}
+        className="mx-auto shadow p-4 rounded"
+        style={{
+          width: "95%",
+          maxWidth: "440px",
+        }}
+      >
+        <div className="mb-3">
+          <label htmlFor="name" className="form-label">
+            User Name
+          </label>
           <input
             type="text"
             name="username"
             value={username}
+            className="form-control"
             onChange={handleUsernameChange}
           />
         </div>
-        <div>
-          <label htmlFor="password">Password</label>
+        <div className="mb-3">
+          <label htmlFor="password" className="form-label">
+            Password
+          </label>
           <input
             type="password"
             name="password"
             value={password}
+            className="form-control"
             onChange={handlePasswordChange}
           />
         </div>
         <div>
-          <button type="submit" name="login">
+          <button type="submit" name="login" className="btn btn-primary">
             Login
           </button>
         </div>
@@ -143,10 +163,10 @@ function ListTodosComponent() {
     },
   ];
   return (
-    <div className="listTodosComponent">
-      <h1>Things you want to do!</h1>
+    <div className="container">
+      <h1 className="mb-4">Things you want to do!</h1>
       <div>
-        <table border={2}>
+        <table className="table table-hover border shadow">
           <thead>
             <tr>
               <th>id</th>
@@ -169,6 +189,55 @@ function ListTodosComponent() {
           </tbody>
         </table>
       </div>
+    </div>
+  );
+}
+
+function HeaderComponent() {
+  return (
+    <div className="header">
+      <div className="container">
+        <ul className="navbar-nav">
+          <li className="nav-item">
+            <Link className="nav-link" to="/welcome">
+              Home
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/todos">
+              Todos
+            </Link>
+          </li>
+          12
+          <li className="nav-item">
+            <Link className="nav-link" to="/logout">
+              Logout
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/login">
+              Login
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
+}
+
+function FooterComponent() {
+  return (
+    <div className="text-center my-3">
+      <hr /> Footer
+    </div>
+  );
+}
+
+function LogoutComponent() {
+  return (
+    <div className="logoutComponent">
+      <h1>You are logged out</h1>
+      <p>Thankyou for using our App. Come back soon!</p>
     </div>
   );
 }
