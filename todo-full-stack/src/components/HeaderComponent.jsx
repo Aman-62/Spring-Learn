@@ -20,14 +20,16 @@ function HeaderComponent() {
         </button>
 
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div className="navbar-nav">
-            <Link className="nav-link active" to="/welcome">
-              Home
-            </Link>
-            <Link className="nav-link" to="/todos">
-              Todos
-            </Link>
-          </div>
+          {isAuthenticated && (
+            <div className="navbar-nav">
+              <Link className="nav-link active" to="/welcome">
+                Home
+              </Link>
+              <Link className="nav-link" to="/todos">
+                Todos
+              </Link>
+            </div>
+          )}
         </div>
 
         <ul className="navbar-nav">
