@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useAuthContext } from "../security/AuthContext";
 
 function HeaderComponent() {
-  const { isAuthenticated } = useAuthContext();
+  const { isAuthenticated, logout } = useAuthContext();
 
   return (
     <div className="border-bottom border-light border-5 navbar navbar-expand-md mb-5 py-3">
@@ -42,7 +42,7 @@ function HeaderComponent() {
           )}
           {isAuthenticated && (
             <li className="nav-item">
-              <Link className="nav-link" to="/logout">
+              <Link className="nav-link" onClick={logout} to="/logout">
                 Logout
               </Link>
             </li>
