@@ -3,10 +3,9 @@ import { useNavigate } from "react-router-dom";
 import { useAuthContext } from "../security/AuthContext";
 
 function LoginComponent() {
-  const { setIsAuthenticated, login } = useAuthContext();
+  const { login } = useAuthContext();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [showErrorMessage, setShowErrorMessage] = useState(false);
 
   const navigate = useNavigate();
@@ -31,7 +30,7 @@ function LoginComponent() {
 
   return (
     <div className="text-center container">
-      <h1>Login page</h1>
+      <h1 className="display-3">Login page</h1>
       {showErrorMessage && (
         <div className="text-danger">
           Authentication Failed, Please check your credentials
@@ -39,10 +38,10 @@ function LoginComponent() {
       )}
       <form
         onSubmit={handleSubmit}
-        className="mx-auto shadow p-4 rounded"
+        className="mx-auto my-5 shadow p-4 rounded"
         style={{
           width: "95%",
-          maxWidth: "440px",
+          maxWidth: "540px",
         }}
       >
         <div className="mb-3">

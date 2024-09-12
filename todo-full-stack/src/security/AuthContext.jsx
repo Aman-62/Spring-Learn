@@ -18,6 +18,7 @@ function AuthProvider({ children }) {
       return false;
     }
   }
+
   function logout() {
     setIsAuthenticated(false);
   }
@@ -26,7 +27,6 @@ function AuthProvider({ children }) {
     <AuthContext.Provider
       value={{
         isAuthenticated,
-        setIsAuthenticated,
         login,
         logout,
       }}

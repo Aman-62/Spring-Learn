@@ -30,7 +30,7 @@ function ListTodosComponent() {
   ];
   return (
     <div className="container">
-      <h1 className="mb-4">Things you want to do!</h1>
+      <h1 className="display-3 mb-4">Things you want to do!</h1>
       <div>
         <table className="table table-hover border shadow">
           <thead>
